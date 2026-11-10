@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -26,12 +25,17 @@ body {
     overflow: hidden;
 }
 
-/* Header & Navigation (Scrolls away normally) */
-header {
-    background: linear-gradient(135deg, #090d16 0%, #111827 100%);
+/* Sticky Header & Navigation Bar (Always Stays Fixed at Top) */
+.sticky-header {
+    background: rgba(9, 13, 22, 0.95);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-    padding: 3rem 0;
+    padding: 1.8rem 0 1.2rem 0;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 /* Moving/Glowing Name Animation */
@@ -52,37 +56,37 @@ header {
 
 .moving-glowing-name {
     font-family: 'Fira Code', monospace;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: -1px;
     background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: moveAndGlow 4s ease-in-out infinite;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
 }
 
 .site-origin-badge {
     display: inline-block;
     background: rgba(56, 189, 248, 0.1);
     border: 1px solid rgba(56, 189, 248, 0.3);
-    padding: 0.4rem 1rem;
+    padding: 0.3rem 0.8rem;
     border-radius: 50px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #38bdf8;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 }
 
-header .tagline {
-    font-size: 1.1rem;
+.sticky-header .tagline {
+    font-size: 0.95rem;
     color: #94a3b8;
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    gap: 1.8rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
 }
 
@@ -90,7 +94,7 @@ nav a {
     color: #cbd5e1;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 
@@ -98,25 +102,14 @@ nav a:hover {
     color: #38bdf8;
 }
 
-/* Sections */
-.section {
-    padding: 5rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+/* Main Content Area */
+.main-content-area {
+    padding: 3rem 0;
 }
 
-.section-title {
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    color: #f8fafc;
-    letter-spacing: -0.5px;
-}
-
-.section-desc {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 3rem auto;
-    color: #94a3b8;
+/* Page Sections Default */
+.page-section {
+    padding: 1rem 0;
 }
 
 /* About Content */
@@ -135,6 +128,21 @@ nav a:hover {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
     color: #cbd5e1;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #f8fafc;
+    letter-spacing: -0.5px;
+}
+
+.section-desc {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    color: #94a3b8;
 }
 
 /* CV Group */
