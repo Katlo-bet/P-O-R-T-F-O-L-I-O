@@ -8,17 +8,21 @@
 </head>
 <body>
 
-    <!-- Header & Navigation -->
+    <!-- Header & Movable Glowing Banner -->
     <header>
         <div class="container header-content">
-            <h1 class="creative-name">katlo.moseki</h1>
+            <h1 class="floating-glowing-name">KATLO.MOSEKI</h1>
+            <div class="site-origin-badge">
+                <span>⚡ Custom-engineered portfolio generated using HTML5 & CSS3, live-deployed via GitHub Pages.</span>
+            </div>
             <p class="tagline">Bachelor of Business Intelligence and Data Analytics | Strategic Entrepreneur & Data Enthusiast</p>
             <nav>
                 <a href="#about">About Me</a>
                 <a href="#cv">CV & Background</a>
                 <a href="#projects">Technical Projects</a>
                 <a href="#blog">Blog & Insights</a>
-                <a href="#contact">Contact & Templates</a>
+                <a href="#email-template">Email Template</a>
+                <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
@@ -26,7 +30,7 @@
     <!-- About Me Section -->
     <section id="about" class="section">
         <div class="container">
-            <h2>About Me</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <p>I am a dynamic first-year undergraduate student at the Botswana Accountancy College (BAC) Francistown, pursuing a <strong>Bachelor of Business Intelligence and Data Analytics</strong>. My unique perspective on modern business is driven by my aptitude for acting as a strategic middleman and connector in entrepreneurship—using data intelligence to bridge the gap between producers, markets, and consumers.</p>
                 <p>Leveraging relational database architectures, SQL querying, and Python data pipelines, I analyze market demand to identify optimal connections. By transforming raw data into actionable business intelligence, I streamline supply chains, optimize networks, and drive efficient commercial transactions. I am deeply dedicated to using modern analytical tools to innovate established business models, scale operations, and foster sustainable economic development.</p>
@@ -37,10 +41,10 @@
     <!-- CV & Educational Background Section -->
     <section id="cv" class="section">
         <div class="container">
-            <h2>Curriculum Vitae (CV) & Background</h2>
+            <h2 class="section-title">Curriculum Vitae (CV) & Background</h2>
             
-            <!-- Personal Details Box -->
-            <div class="cv-block">
+            <!-- Personal Details -->
+            <div class="cv-group">
                 <h3>📋 Personal Details</h3>
                 <ul class="cv-details-list">
                     <li><strong>Full Name:</strong> Katlo Moseki</li>
@@ -54,7 +58,7 @@
             </div>
 
             <!-- Educational Timeline -->
-            <div class="cv-block">
+            <div class="cv-group">
                 <h3>🎓 Educational Background</h3>
                 <ul class="timeline">
                     <li>
@@ -74,7 +78,7 @@
             </div>
 
             <!-- Technical & Professional Skills with Styled Badges -->
-            <div class="cv-block">
+            <div class="cv-group">
                 <h3>🛠️ Technical & Professional Skills</h3>
                 <div class="skills-grid">
                     <div class="skill-item">Database Management Systems (DBMS)</div>
@@ -91,24 +95,24 @@
     <!-- Technical Projects & Screenshots Section -->
     <section id="projects" class="section">
         <div class="container">
-            <h2>Technical & Analytical Projects</h2>
+            <h2 class="section-title">Technical & Analytical Projects</h2>
             <p class="section-desc">Key artifacts showcasing practical competence in database engineering, SQL database querying, and Python script processing.</p>
             
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="db-query.png" alt="SQL Database Query" style="width:100%; border-radius:6px; margin-bottom:1rem;">
+                    <img src="db-query.png" alt="SQL Database Query" style="width:100%; border-radius:8px; margin-bottom:1rem;">
                     <h3>SQL Query Execution & Data Retrieval</h3>
                     <p>Demonstrating relational database management, multi-table joins, and structured query language executions designed to support complex business reporting.</p>
                 </div>
 
                 <div class="project-card">
-                    <img src="python-script.png" alt="Python Analytics Pipeline" style="width:100%; border-radius:6px; margin-bottom:1rem;">
+                    <img src="python-script.png" alt="Python Analytics Pipeline" style="width:100%; border-radius:8px; margin-bottom:1rem;">
                     <h3>Python Data Analytics Pipeline</h3>
                     <p>Automated script implementation built for data preprocessing, data cleaning, statistical evaluation, and streamlined analytical logic workflows.</p>
                 </div>
 
                 <div class="project-card" style="grid-column: span 2;">
-                    <img src="database-schema.png" alt="Database Schema Design" style="width:100%; border-radius:6px; margin-bottom:1rem;">
+                    <img src="database-schema.png" alt="Database Schema Design" style="width:100%; border-radius:8px; margin-bottom:1rem;">
                     <h3>Database Schema & Entity-Relationship Design</h3>
                     <p>Mapping out relational dependencies, primary/foreign keys, and normalizing data models to optimize database integrity for modern business intelligence applications.</p>
                 </div>
@@ -119,7 +123,7 @@
     <!-- Expanded Blog & Insights Section -->
     <section id="blog" class="section">
         <div class="container">
-            <h2>Blog & Professional Insights</h2>
+            <h2 class="section-title">Blog & Professional Insights</h2>
             <div class="blog-grid">
                 <div class="blog-post">
                     <h3>The Role of Data Analytics in Modern African Entrepreneurship</h3>
@@ -135,11 +139,51 @@
         </div>
     </section>
 
-    <!-- Contact & Email Templates Section -->
+    <!-- Standalone Email Template Section -->
+    <section id="email-template" class="section">
+        <div class="container">
+            <h2 class="section-title">Job Application / Hiring Email Template</h2>
+            <p class="section-desc">A ready-to-use, professional template tailored for prospective employers or internship coordinators.</p>
+            
+            <div class="email-template-box">
+                <div class="email-header-bar">
+                    <span>✉️ Professional Recruitment Message</span>
+                    <span class="tip">Ready to copy & send</span>
+                </div>
+                <pre class="email-body-content">
+Subject: Application for Data Analytics / Business Intelligence Role - Katlo Moseki
+
+Dear [Hiring Manager's Name or Recruitment Team],
+
+I hope this email finds you well.
+
+I am writing to express my strong interest in professional opportunities, internships, or industrial attachments within your organization. I am a dedicated first-year undergraduate student pursuing a Bachelor of Business Intelligence and Data Analytics at the Botswana Accountancy College (BAC) Francistown campus. 
+
+With a strong academic foundation in relational database management, structured SQL querying, and Python data pipelines, I combine technical analytical capabilities with entrepreneurial acumen. Furthermore, my experience as a strategic middleman and connector in commercial ventures allows me to analyze market data effectively, bridging producers and markets to optimize supply chains and operational efficiency.
+
+To view my live technical projects, database architecture designs, and full professional CV, please visit my digital portfolio:
+
+👉 Live Portfolio URL: [Insert your GitHub Pages Link Here]
+
+I am eager to apply my analytical training, technical skills, and problem-solving mindset to add tangible value to your team. Thank you for your time and consideration. I look forward to discussing how my skills align with your organization’s objectives.
+
+Best regards,
+
+Katlo Moseki
+Omang No.: 689514817
+Phone: (+267) 71707202
+Email: noobmike872@gmail.com
+Francistown, Botswana
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
-            <h2>Contact & Recruitment Templates</h2>
-            <div class="contact-box" style="margin-bottom: 3rem;">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-box">
                 <p>Feel free to reach out directly for collaborations, industrial attachments, or employment opportunities.</p>
                 <ul>
                     <li><strong>Email:</strong> noobmike872@gmail.com</li>
@@ -148,49 +192,15 @@
                     <li><strong>Location:</strong> Francistown, Botswana</li>
                 </ul>
             </div>
-
-            <!-- Email Template Box for Hiring -->
-            <div class="cv-block" style="background: #f8fafc; border: 1px solid #cbd5e1;">
-                <h3>✉️ Hiring / Job Application Email Template</h3>
-                <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 1rem;">Copy and use this template when emailing potential employers or hiring managers:</p>
-                <div style="background: #ffffff; padding: 1.5rem; border-radius: 6px; border-left: 4px solid #0284c7; font-family: monospace; font-size: 0.9rem; white-space: pre-line; color: #1e293b;">
-                    Subject: Application for Data Analytics / Business Intelligence Role - Katlo Moseki
-
-                    Dear [Hiring Manager's Name or Recruitment Team],
-
-                    I hope this email finds you well.
-
-                    I am writing to express my strong interest in professional opportunities, internships, or industrial attachments within your organization. I am a dedicated first-year undergraduate student pursuing a Bachelor of Business Intelligence and Data Analytics at the Botswana Accountancy College (BAC) Francistown campus. 
-
-                    With a strong academic foundation in relational database management, structured SQL querying, and Python data pipelines, I combine technical analytical capabilities with entrepreneurial acumen. Furthermore, my experience as a strategic middleman and connector in commercial ventures allows me to analyze market data effectively, bridging producers and markets to optimize supply chains and operational efficiency.
-
-                    To view my live technical projects, database architecture designs, and full professional CV, please visit my digital portfolio:
-
-                    👉 Live Portfolio URL: [Insert your GitHub Pages Link Here]
-
-                    I am eager to apply my analytical training, technical skills, and problem-solving mindset to add tangible value to your team. Thank you for your time and consideration. I look forward to discussing how my skills align with your organization’s objectives.
-
-                    Best regards,
-
-                    Katlo Moseki
-                    Omang No.: 689514817
-                    Phone: (+267) 71707202
-                    Email: noobmike872@gmail.com
-                    Francistown, Botswana
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Katlo Moseki. All Rights Reserved. Built for Professional Portfolio & CV Submission.</p>
+            <p>&copy; 2026 Katlo Moseki. Engineered with precision. All Rights Reserved.</p>
         </div>
     </footer>
-
-</body>
-</html>
 
 </body>
 </html>
