@@ -8,8 +8,8 @@
 </head>
 <body>
 
-    <!-- 1. The Header (Scrolls away normally) -->
-    <header class="main-header">
+    <!-- 1. The Dynamic Header (Shrinks when scrolling down) -->
+    <header class="main-header" id="dynamicHeader">
         <div class="container header-content">
             <h1 class="moving-glowing-name">KATLO.MOSEKI</h1>
             <div class="site-origin-badge">
@@ -19,15 +19,15 @@
         </div>
     </header>
 
-    <!-- 2. Sticky Navigation Bar (Stays fixed on screen when scrolling) -->
+    <!-- 2. Sticky Navigation Bar with Highlighted Spacing -->
     <nav class="sticky-nav">
         <div class="container nav-container">
-            <a href="#about" onclick="showSection('about', event)">About Me</a>
-            <a href="#cv" onclick="showSection('cv', event)">CV and Background</a>
-            <a href="#projects" onclick="showSection('projects', event)">Technical Projects</a>
-            <a href="#blog" onclick="showSection('blog', event)">Blog and Insights</a>
-            <a href="#email-template" onclick="showSection('email-template', event)">Email Template</a>
-            <a href="#contact" onclick="showSection('contact', event)">Contact</a>
+            <a href="#about" class="nav-btn" onclick="showSection('about', event)">About Me</a>
+            <a href="#cv" class="nav-btn" onclick="showSection('cv', event)">CV and Background</a>
+            <a href="#projects" class="nav-btn" onclick="showSection('projects', event)">Technical Projects</a>
+            <a href="#blog" class="nav-btn" onclick="showSection('blog', event)">Blog and Insights</a>
+            <a href="#email-template" class="nav-btn" onclick="showSection('email-template', event)">Email Template</a>
+            <a href="#contact" class="nav-btn" onclick="showSection('contact', event)">Contact</a>
         </div>
     </nav>
 
@@ -208,28 +208,25 @@ Francistown, Botswana
         </div>
     </footer>
 
-    <!-- JavaScript to Handle Section Switching -->
+    <!-- JavaScript for Section Switching & Header Shrinking on Scroll -->
     <script>
         function showSection(sectionId, event) {
             event.preventDefault();
             
-            // Hide all page sections
             const sections = document.querySelectorAll('.page-section');
             sections.forEach(section => {
                 section.style.display = 'none';
             });
             
-            // Show only the clicked section
             const targetSection = document.getElementById(sectionId);
             if (targetSection) {
                 targetSection.style.display = 'block';
             }
             
-            // Smooth scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Initialize: Show only 'about' section on page load, hide the rest
+        // Initialize: Show only 'about' section on page load
         document.addEventListener("DOMContentLoaded", () => {
             const sections = document.querySelectorAll('.page-section');
             sections.forEach(section => {
@@ -237,6 +234,16 @@ Francistown, Botswana
                     section.style.display = 'none';
                 }
             });
+        });
+
+        // Shrink header on scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('dynamicHeader');
+            if (window.scrollY > 50) {
+                header.classList.add('shrink-header');
+            } else {
+                header.classList.remove('shrink-header');
+            }
         });
     </script>
 </body>
