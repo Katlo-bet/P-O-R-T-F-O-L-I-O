@@ -19,24 +19,25 @@
         </div>
     </header>
 
-    <!-- 2. Sticky Navigation Bar with Highlighted Spacing -->
+    <!-- 2. Sticky Navigation Bar with Highlighted Buttons & Spacing -->
     <nav class="sticky-nav">
         <div class="container nav-container">
-            <a href="#about" class="nav-btn" onclick="showSection('about', event)">About Me</a>
-            <a href="#cv" class="nav-btn" onclick="showSection('cv', event)">CV and Background</a>
-            <a href="#projects" class="nav-btn" onclick="showSection('projects', event)">Technical Projects</a>
-            <a href="#blog" class="nav-btn" onclick="showSection('blog', event)">Blog and Insights</a>
+            <a href="#about" class="nav-btn" onclick="showSection('about', event)">Home</a>
+            <a href="#cv" class="nav-btn" onclick="showSection('cv', event)">Curriculum Vitae</a>
+            <a href="#blog" class="nav-btn" onclick="showSection('blog', event)">Reflective Blog Post</a>
+            <a href="#group-work" class="nav-btn" onclick="showSection('group-work', event)">Group Work Experience</a>
+            <a href="#projects" class="nav-btn" onclick="showSection('projects', event)">Skills and Projects</a>
+            <a href="#application-letter" class="nav-btn" onclick="showSection('application-letter', event)">Application Letter</a>
             <a href="#email-template" class="nav-btn" onclick="showSection('email-template', event)">Email Template</a>
-            <a href="#contact" class="nav-btn" onclick="showSection('contact', event)">Contact</a>
         </div>
     </nav>
 
     <!-- Main Content Area -->
     <main class="main-content-area">
-        <!-- About Me Section -->
+        <!-- Home / About Me Section -->
         <section id="about" class="page-section">
             <div class="container">
-                <h2 class="section-title">About Me</h2>
+                <h2 class="section-title">Home / About Me</h2>
                 <div class="about-content">
                     <p>I am a dynamic first-year undergraduate student at the Botswana Accountancy College (BAC) Francistown, pursuing a <strong>Bachelor of Business Intelligence and Data Analytics</strong>. My unique perspective on modern business is driven by my aptitude for acting as a strategic middleman and connector in entrepreneurship—using data intelligence to bridge the gap between producers, markets, and consumers.</p>
                     <p>Leveraging relational database architectures, SQL querying, and Python data pipelines, I analyze market demand to identify optimal connections. By transforming raw data into actionable business intelligence, I streamline supply chains, optimize networks, and drive efficient commercial transactions. I am deeply dedicated to using modern analytical tools to innovate established business models, scale operations, and foster sustainable economic development.</p>
@@ -44,10 +45,10 @@
             </div>
         </section>
 
-        <!-- CV Section -->
+        <!-- Curriculum Vitae Section (Omang Removed) -->
         <section id="cv" class="page-section">
             <div class="container">
-                <h2 class="section-title">CV and Background</h2>
+                <h2 class="section-title">Curriculum Vitae</h2>
                 
                 <div class="cv-group">
                     <h3>📋 Personal Details</h3>
@@ -55,7 +56,6 @@
                         <li><strong>Full Name:</strong> Katlo Moseki</li>
                         <li><strong>Nationality:</strong> Motswana</li>
                         <li><strong>Date of Birth:</strong> 25/10/2006</li>
-                        <li><strong>Omang No.:</strong> 689514817</li>
                         <li><strong>Email:</strong> noobmike872@gmail.com</li>
                         <li><strong>Cell:</strong> 71707202</li>
                         <li><strong>WhatsApp:</strong> +27 (0) 660117665</li>
@@ -81,8 +81,46 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+        </section>
 
-                <div class="cv-group">
+        <!-- Reflective Blog Post Section -->
+        <section id="blog" class="page-section">
+            <div class="container">
+                <h2 class="section-title">Reflective Blog Post</h2>
+                <div class="blog-grid">
+                    <div class="blog-post">
+                        <h3>The Role of Data Analytics in Modern African Entrepreneurship</h3>
+                        <p class="blog-date">November 2026</p>
+                        <p>Entrepreneurship across Botswana and the broader African continent is undergoing a massive digital transformation. Small and medium enterprises are no longer driven purely by intuition; they require granular data analytics to forecast inventory, understand consumer behavior, and mitigate financial risk. As a student of Business Intelligence, I believe that integrating data pipelines into local business models bridges the gap between traditional commerce and scalable modern enterprise.</p>
+                    </div>
+                    <div class="blog-post">
+                        <h3>Acting as a Strategic Middleman: Connecting Value Through Intelligence</h3>
+                        <p class="blog-date">November 2026</p>
+                        <p>The modern middleman is not merely a pass-through entity—they are an intelligence aggregator. By leveraging database architectures and structured market insights, intermediaries can successfully match supply with precise demand curves. This reduces market friction, ensures transparent pricing, and creates sustainable economic value for both raw producers and end-market buyers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Group Work Experience Section -->
+        <section id="group-work" class="page-section">
+            <div class="container">
+                <h2 class="section-title">Group Work Experience</h2>
+                <div class="about-content">
+                    <p>During my studies at the Botswana Accountancy College (BAC), collaborative problem-solving and peer synergy have been core to executing complex business intelligence assessments. Working alongside my academic group project partners—<strong>Basadi, Lesego, Shaun, Boraete, and Braidman</strong>—we have successfully coordinated group data analytics deliverables, shared database normalization responsibilities, and synchronized Python pipeline logic.</p>
+                    <p>This teamwork experience sharpened my leadership, communication, and project management skills, proving that combining diverse analytical viewpoints yields much robust data-driven solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills and Projects Section -->
+        <section id="projects" class="page-section">
+            <div class="container">
+                <h2 class="section-title">Skills and Projects</h2>
+                <p class="section-desc">Key artifacts showcasing practical competence in database engineering, SQL database querying, and Python script processing.</p>
+                
+                <div class="cv-group" style="margin-bottom: 3rem;">
                     <h3>🛠️ Technical & Professional Skills</h3>
                     <div class="skills-grid">
                         <div class="skill-item">Database Management Systems (DBMS)</div>
@@ -93,15 +131,7 @@
                         <div class="skill-item">Version Control (Git & GitHub Pages)</div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="page-section">
-            <div class="container">
-                <h2 class="section-title">Technical Projects</h2>
-                <p class="section-desc">Key artifacts showcasing practical competence in database engineering, SQL database querying, and Python script processing.</p>
-                
                 <div class="projects-grid">
                     <div class="project-card">
                         <img src="db-query.png" alt="SQL Database Query" style="width:100%; border-radius:8px; margin-bottom:1rem;">
@@ -114,31 +144,24 @@
                         <h3>Python Data Analytics Pipeline</h3>
                         <p>Automated script implementation built for data preprocessing, data cleaning, statistical evaluation, and streamlined analytical logic workflows.</p>
                     </div>
-
-                    <div class="project-card" style="grid-column: span 2;">
-                        <img src="database-schema.png" alt="Database Schema Design" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-                        <h3>Database Schema & Entity-Relationship Design</h3>
-                        <p>Mapping out relational dependencies, primary/foreign keys, and normalizing data models to optimize database integrity for modern business intelligence applications.</p>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Blog Section -->
-        <section id="blog" class="page-section">
+        <!-- Application Letter Section -->
+        <section id="application-letter" class="page-section">
             <div class="container">
-                <h2 class="section-title">Blog and Insights</h2>
-                <div class="blog-grid">
-                    <div class="blog-post">
-                        <h3>The Role of Data Analytics in Modern African Entrepreneurship</h3>
-                        <p class="blog-date">November 2026</p>
-                        <p>Entrepreneurship across Botswana and the broader African continent is undergoing a massive digital transformation. Small and medium enterprises are no longer driven purely by intuition; they require granular data analytics to forecast inventory, understand consumer behavior, and mitigate financial risk. As a student of Business Intelligence, I believe that integrating data pipelines into local business models bridges the gap between traditional commerce and scalable modern enterprise.</p>
-                    </div>
-                    <div class="blog-post">
-                        <h3>Acting as a Strategic Middleman: Connecting Value Through Intelligence</h3>
-                        <p class="blog-date">November 2026</p>
-                        <p>The modern middleman is not merely a pass-through entity—they are an intelligence aggregator. By leveraging database architectures and structured market insights, intermediaries can successfully match supply with precise demand curves. This reduces market friction, ensures transparent pricing, and creates sustainable economic value for both raw producers and end-market buyers.</p>
-                    </div>
+                <h2 class="section-title">Application Letter</h2>
+                <div class="about-content">
+                    <p><strong>To:</strong> Recruitment & Industrial Attachment Committee</p>
+                    <p><strong>From:</strong> Katlo Moseki</p>
+                    <br>
+                    <p>Dear Hiring Team,</p>
+                    <p>I am writing to formally submit my expression of interest for data analytics opportunities and industrial attachments. As a first-year undergraduate student pursuing a Bachelor of Business Intelligence and Data Analytics at the Botswana Accountancy College, I bring a unique blend of technical data handling capabilities and commercial entrepreneurship awareness.</p>
+                    <p>My training encompasses relational database design, SQL querying, and Python workflow scripting. I am eager to contribute fresh analytical insights, streamline supply workflows, and add tangible value to your esteemed organization.</p>
+                    <br>
+                    <p>Sincerely,</p>
+                    <p><strong>Katlo Moseki</strong></p>
                 </div>
             </div>
         </section>
@@ -174,28 +197,10 @@ I am eager to apply my analytical training, technical skills, and problem-solvin
 Best regards,
 
 Katlo Moseki
-Omang No.: 689514817
 Phone: 71707202 / WhatsApp: +27 (0) 660117665
 Email: noobmike872@gmail.com
 Francistown, Botswana
                     </pre>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="page-section">
-            <div class="container">
-                <h2 class="section-title">Contact</h2>
-                <div class="contact-box">
-                    <p>Feel free to reach out directly for collaborations, industrial attachments, or employment opportunities.</p>
-                    <ul>
-                        <li><strong>Email:</strong> noobmike872@gmail.com</li>
-                        <li><strong>Cell:</strong> 71707202</li>
-                        <li><strong>WhatsApp:</strong> +27 (0) 660117665</li>
-                        <li><strong>Omang No.:</strong> 689514817</li>
-                        <li><strong>Location:</strong> Francistown, Botswana</li>
-                    </ul>
                 </div>
             </div>
         </section>
@@ -226,7 +231,7 @@ Francistown, Botswana
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Initialize: Show only 'about' section on page load
+        // Initialize: Show only 'about' (Home) section on page load
         document.addEventListener("DOMContentLoaded", () => {
             const sections = document.querySelectorAll('.page-section');
             sections.forEach(section => {
@@ -246,8 +251,5 @@ Francistown, Botswana
             }
         });
     </script>
-</body>
-</html>
-
 </body>
 </html>
