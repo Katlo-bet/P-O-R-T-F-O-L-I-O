@@ -8,29 +8,32 @@
 </head>
 <body>
 
-    <!-- Sticky Header & Navigation Bar (Always Stays Visible) -->
-    <header class="sticky-header">
+    <!-- 1. The Header (Scrolls away normally) -->
+    <header class="main-header">
         <div class="container header-content">
             <h1 class="moving-glowing-name">KATLO.MOSEKI</h1>
             <div class="site-origin-badge">
                 <span>CODING USING HTML AND CSS VIA GITHUB PAGES</span>
             </div>
             <p class="tagline">Bachelor of Business Intelligence and Data Analytics | Strategic Entrepreneur & Data Enthusiast</p>
-            
-            <nav>
-                <a href="#about" onclick="showSection('about', event)">About Me</a>
-                <a href="#cv" onclick="showSection('cv', event)">CV and Background</a>
-                <a href="#projects" onclick="showSection('projects', event)">Technical Projects</a>
-                <a href="#blog" onclick="showSection('blog', event)">Blog and Insights</a>
-                <a href="#email-template" onclick="showSection('email-template', event)">Email Template</a>
-                <a href="#contact" onclick="showSection('contact', event)">Contact</a>
-            </nav>
         </div>
     </header>
 
-    <!-- Main Content Wrapper -->
+    <!-- 2. Sticky Navigation Bar (Stays fixed on screen when scrolling) -->
+    <nav class="sticky-nav">
+        <div class="container nav-container">
+            <a href="#about" onclick="showSection('about', event)">About Me</a>
+            <a href="#cv" onclick="showSection('cv', event)">CV and Background</a>
+            <a href="#projects" onclick="showSection('projects', event)">Technical Projects</a>
+            <a href="#blog" onclick="showSection('blog', event)">Blog and Insights</a>
+            <a href="#email-template" onclick="showSection('email-template', event)">Email Template</a>
+            <a href="#contact" onclick="showSection('contact', event)">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
     <main class="main-content-area">
-        <!-- 1. About Me Section -->
+        <!-- About Me Section -->
         <section id="about" class="page-section">
             <div class="container">
                 <h2 class="section-title">About Me</h2>
@@ -41,7 +44,7 @@
             </div>
         </section>
 
-        <!-- 2. CV Section -->
+        <!-- CV Section -->
         <section id="cv" class="page-section">
             <div class="container">
                 <h2 class="section-title">CV and Background</h2>
@@ -93,7 +96,7 @@
             </div>
         </section>
 
-        <!-- 3. Projects Section -->
+        <!-- Projects Section -->
         <section id="projects" class="page-section">
             <div class="container">
                 <h2 class="section-title">Technical Projects</h2>
@@ -121,7 +124,7 @@
             </div>
         </section>
 
-        <!-- 4. Blog Section -->
+        <!-- Blog Section -->
         <section id="blog" class="page-section">
             <div class="container">
                 <h2 class="section-title">Blog and Insights</h2>
@@ -140,7 +143,7 @@
             </div>
         </section>
 
-        <!-- 5. Email Template Section -->
+        <!-- Email Template Section -->
         <section id="email-template" class="page-section">
             <div class="container">
                 <h2 class="section-title">Email Template</h2>
@@ -180,7 +183,7 @@ Francistown, Botswana
             </div>
         </section>
 
-        <!-- 6. Contact Section -->
+        <!-- Contact Section -->
         <section id="contact" class="page-section">
             <div class="container">
                 <h2 class="section-title">Contact</h2>
@@ -205,7 +208,7 @@ Francistown, Botswana
         </div>
     </footer>
 
-    <!-- JavaScript to Handle Single-Page Section Switcher -->
+    <!-- JavaScript to Handle Section Switching -->
     <script>
         function showSection(sectionId, event) {
             event.preventDefault();
@@ -222,7 +225,7 @@ Francistown, Botswana
                 targetSection.style.display = 'block';
             }
             
-            // Smooth scroll to top of the content area
+            // Smooth scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
