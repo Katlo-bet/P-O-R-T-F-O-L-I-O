@@ -29,10 +29,12 @@ body {
 header {
     background: linear-gradient(135deg, #090d16 0%, #111827 100%);
     border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-    padding: 3rem 0;
+    padding: 2rem 0;
     text-align: center;
-    position: relative;
-    overflow: hidden;
+    position: sticky; /* Makes it stay visible at the top */
+    top: 0;           /* Sticks right to the very top edge */
+    z-index: 1000;    /* Keeps it on top of other content when scrolling */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 /* Movable glowing name keyframes */
