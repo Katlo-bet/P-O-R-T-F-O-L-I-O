@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth; /* Makes anchor links glide smoothly */
 }
 
 body {
@@ -25,44 +26,73 @@ body {
     overflow: hidden;
 }
 
-/* Header & Movable Glowing Animation */
+/* Sticky Navigation Bar */
 header {
-    background: linear-gradient(135deg, #090d16 0%, #111827 100%);
+    background: rgba(9, 13, 22, 0.95);
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-    padding: 2rem 0;
+    padding: 1rem 0;
     text-align: center;
-    position: sticky; /* Makes it stay visible at the top */
-    top: 0;           /* Sticks right to the very top edge */
-    z-index: 1000;    /* Keeps it on top of other content when scrolling */
+    position: sticky; /* Sticks to the top when scrolling */
+    top: 0;
+    z-index: 1000;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 /* Movable glowing name keyframes */
 @keyframes moveAndGlow {
     0% {
-        transform: translateX(-15px);
-        text-shadow: 0 0 15px rgba(56, 189, 248, 0.4), 0 0 30px rgba(129, 140, 248, 0.2);
+        transform: translateX(-10px);
+        text-shadow: 0 0 10px rgba(56, 189, 248, 0.4), 0 0 20px rgba(129, 140, 248, 0.2);
     }
     50% {
-        transform: translateX(15px);
-        text-shadow: 0 0 25px rgba(56, 189, 248, 0.8), 0 0 50px rgba(129, 140, 248, 0.5);
+        transform: translateX(10px);
+        text-shadow: 0 0 20px rgba(56, 189, 248, 0.8), 0 0 40px rgba(129, 140, 248, 0.5);
     }
     100% {
-        transform: translateX(-15px);
-        text-shadow: 0 0 15px rgba(56, 189, 248, 0.4), 0 0 30px rgba(129, 140, 248, 0.2);
+        transform: translateX(-10px);
+        text-shadow: 0 0 10px rgba(56, 189, 248, 0.4), 0 0 20px rgba(129, 140, 248, 0.2);
     }
 }
 
 .floating-glowing-name {
     font-family: 'Fira Code', monospace;
-    font-size: 3rem;
+    font-size: 1.8rem; /* Sized perfectly for the sticky bar */
     font-weight: 700;
     letter-spacing: -1px;
     background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: moveAndGlow 4s ease-in-out infinite;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Hero Section (The intro text & badges that scroll away) */
+.hero-section {
+    padding: 3rem 0 2rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, #090d16 0%, #111827 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .site-origin-badge {
@@ -76,29 +106,9 @@ header {
     margin-bottom: 1rem;
 }
 
-header .tagline {
+.hero-section .tagline {
     font-size: 1.1rem;
     color: #94a3b8;
-    margin-bottom: 2rem;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 1.8rem;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: #cbd5e1;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #38bdf8;
 }
 
 /* Sections */
@@ -140,7 +150,7 @@ nav a:hover {
     color: #cbd5e1;
 }
 
-/* CV Section Without Heavy Background Cards */
+/* CV Group */
 .cv-group {
     margin-bottom: 3.5rem;
     max-width: 900px;
@@ -185,7 +195,7 @@ nav a:hover {
     color: #cbd5e1;
 }
 
-/* Skills Grid with Glowing Neon Borders */
+/* Skills Grid */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -272,7 +282,7 @@ nav a:hover {
     color: #94a3b8;
 }
 
-/* Standalone Email Template Box */
+/* Email Template Box */
 .email-template-box {
     max-width: 900px;
     margin: 0 auto;
@@ -338,5 +348,5 @@ footer {
     text-align: center;
     padding: 3rem 0;
     font-size: 0.9rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255,.05);
 }
