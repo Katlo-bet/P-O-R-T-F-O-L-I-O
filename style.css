@@ -25,17 +25,12 @@ body {
     overflow: hidden;
 }
 
-/* Sticky Header & Navigation Bar (Always Stays Fixed at Top) */
-.sticky-header {
-    background: rgba(9, 13, 22, 0.95);
-    backdrop-filter: blur(12px);
+/* 1. Main Header (Scrolls away normally) */
+.main-header {
+    background: linear-gradient(135deg, #090d16 0%, #111827 100%);
     border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-    padding: 1.8rem 0 1.2rem 0;
+    padding: 3rem 0;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 /* Moving/Glowing Name Animation */
@@ -56,49 +51,61 @@ body {
 
 .moving-glowing-name {
     font-family: 'Fira Code', monospace;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     letter-spacing: -1px;
     background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: moveAndGlow 4s ease-in-out infinite;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .site-origin-badge {
     display: inline-block;
     background: rgba(56, 189, 248, 0.1);
     border: 1px solid rgba(56, 189, 248, 0.3);
-    padding: 0.3rem 0.8rem;
+    padding: 0.4rem 1rem;
     border-radius: 50px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: #38bdf8;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
 }
 
-.sticky-header .tagline {
-    font-size: 0.95rem;
+.main-header .tagline {
+    font-size: 1.1rem;
     color: #94a3b8;
-    margin-bottom: 1.2rem;
 }
 
-nav {
+/* 2. Sticky Navigation Bar (Stays pinned at top permanently) */
+.sticky-nav {
+    background: rgba(9, 13, 22, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.nav-container {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1.8rem;
     flex-wrap: wrap;
 }
 
-nav a {
+.sticky-nav a {
     color: #cbd5e1;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     transition: color 0.3s ease;
 }
 
-nav a:hover {
+.sticky-nav a:hover {
     color: #38bdf8;
 }
 
@@ -344,7 +351,4 @@ footer {
     padding: 3rem 0;
     font-size: 0.9rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-    font-size: 0.9rem;
-    border-top: 1px solid rgba(255, 255, 255,.05);
 }
